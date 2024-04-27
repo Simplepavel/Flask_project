@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>{{num}} Команда. Выберите вопрос</p>
+{% for i in range %}
+{% if t[i] %}
+{% if (i-1) % 5 == 0%}
+<button onclick="window.location.href = 'http://127.0.0.1:5000/open_question/{{i}}/{{id}}';"
+        style="height:100px;width:100px;font:16px;">Вопрос №{{i}}/Очки:100
+</button>
+{% endif %}
+{% if (i-1) % 5 == 1%}
+<button onclick="window.location.href = 'http://127.0.0.1:5000/open_question/{{i}}/{{id}}';"
+        style="height:100px;width:100px;font:16px;">Вопрос №{{i}}/Очки:200
+</button>
+{% endif %}
+{% if (i-1) % 5 == 2%}
+<button onclick="window.location.href = 'http://127.0.0.1:5000/open_question/{{i}}/{{id}}';"
+        style="height:100px;width:100px;font:16px;">Вопрос №{{i}}/Очки:300
+</button>
+{% endif %}
+{% if (i-1) % 5 == 3%}
+<button onclick="window.location.href = 'http://127.0.0.1:5000/open_question/{{i}}/{{id}}';"
+        style="height:100px;width:100px;font:16px;">Вопрос №{{i}}/Очки:400
+</button>
+{% endif %}
+{% if (i - 1) % 5 == 4%}
+<button onclick="window.location.href = 'http://127.0.0.1:5000/open_question/{{i}}/{{id}}';"
+        style="height:100px;width:100px;font:16px;">Вопрос №{{i}}/Очки:500
+</button>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+</body>
+</html>

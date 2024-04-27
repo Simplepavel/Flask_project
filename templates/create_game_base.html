@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Форма для создания новой темы</h1>
+<form method="post">
+    <input placeholder="Введите название игры" name="name_game" style="width:220px;"/></br>
+    {% if k == 1%}
+    <p style="color:red;">Не стоит создавать игру с таким количеством вопросов. Требуется хотя бы 5 шт.</p>
+    {% endif %}
+    <p>Для честной игры рекомендуем повышать сложность каждые 5 вопросов(первые 5 - самые легкие, последние 5 -
+        самые трудные)</p>
+    <p style=" word-spacing: 150px;">Вопрос Ответ</p>
+    {% for item in range %}
+    <p>№{{item + 1}} <input name="Вопрос №{{item + 1}}"/> <input name="Ответ №{{item + 1}}"></p>
+    {% endfor %}
+    </br>
+    <button type='submit'>Создать</button>
+</form>
+
+</body>
+</html>

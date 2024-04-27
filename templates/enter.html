@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+{% if k == 0%}
+
+    <form method="post">
+        <input name="name" placeholder="Введите имя пользователя"><br/>
+        <input name="pass" type="password" placeholder="Введите пароль"><br/>
+        <button type="submit">Войти</button>
+    </form>
+
+{% elif k == 1%}
+
+    <form method="post">
+        <input name="name" placeholder="Введите имя пользователя"><br/>
+        <p style="color:red;">Пользователь с таким именем не существует</p>
+        <input name="pass" type="password" placeholder="Введите пароль"><br/>
+        <button type="submit">Войти</button>
+
+    </form>
+
+{% endif %}
+</body>
+</html>

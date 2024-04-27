@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+    <button onclick="window.location.href = 'http://127.0.0.1:5000/create_game';">Создать новую тему для игры</button>
+    <br/>
+    <button onclick="window.location.href = 'http://127.0.0.1:5000/check_in';">Регистрация</button>
+    <br/>
+    <button onclick="window.location.href = 'http://127.0.0.1:5000/enter';">Войти</button>
+    </br>
+    <p>Выберите игру</p>
+    <p>Новинки:</p>
+    <form method="post">
+        <button type="submit">Играть</button>
+        {% for name, id in range %}
+        <p><input type="radio" name="most" value={{id}} checked>{{name}}</p>
+        {% endfor %}
+        <p></p>
+
+    </form>
+
+</body>
+</html>

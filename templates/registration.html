@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+{% if k == 0%}
+
+    <form method="post">
+        <input name="name" placeholder="Введите имя пользователя"><br/>
+        <input name="pass" type="password" placeholder="Введите пароль"><br/>
+        <input name="pass_r" type="password" placeholder="Повторите пароль"><br/>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+{% elif k == 1%}
+    <form method="post">
+        <input name="name" placeholder="Введите имя пользователя"><br/>
+        <p style="color:red;">Пользователь с таким именем уже есть</p>
+        <input name="pass" type="password" placeholder="Введите пароль"><br/>
+        <input name="pass_r" type="password" placeholder="Повторите пароль"><br/>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    {% elif k == 2%}
+    <form method="post">
+        <input name="name" placeholder="Введите имя пользователя"><br/>
+        <input name="pass" type="password" placeholder="Введите пароль"><br/>
+        <input name="pass_r" type="password" placeholder="Повторите пароль"><br/>
+        <p style="color:red;">Пароли не совпадают</p>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    {% endif %}
+    <button onclick="window.location.href = 'http://127.0.0.1:5000/index';">На главную</button>
+</body>
+</html>
